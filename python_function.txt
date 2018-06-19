@@ -1,0 +1,6 @@
+
+# apply
+a = pd.DataFrame(columns=iris_dataset['feature_names'],data = iris_dataset['data'])
+a['target'] = iris_dataset['target']
+a["target_names"] = a['target'].apply(lambda x : get_target_names(x))
+a.head(10)

@@ -50,3 +50,12 @@ def get_split_data(x):
 
 atent_day[['year','month','day']] = patent_day['date_of_issue'].apply(lambda x : get_split_data(x))
 
+# columsn & data 特定カラムにValueを代入する
+values = [[]]
+values[i].append(e.text)
+※　data は2次元配列でカラム数である必要がある。
+game_df = pd.DataFrame(columns = columns,data = values)
+game_df
+
+
+

@@ -57,5 +57,13 @@ values[i].append(e.text)
 game_df = pd.DataFrame(columns = columns,data = values)
 game_df
 
+#　既存のDataFrameに新しいカラムと値を追加する方法
+diff_lsit = []
+for i in range(len(data)):
+    diff = str(int(data.loc[i]['access count after']) - int(data.loc[i]['access count before']))
+    diff_lsit.append(diff)
+print(diff)
+data['diff'] = diff_lsit
+data
 
 
